@@ -7,6 +7,8 @@ body {
     position: relative;
     overflow: hidden;
     text-align: center;
+    background-image: url(../img/zimnii-les-25.webp);
+    background-size: cover;
 }
 
 .content {
@@ -18,12 +20,53 @@ body {
 
 .img {
     width: clam(300px, 30vw, 500px);
+    border-radius: 45%;
+    animation: borderradius 0.00001s alternate infinite linear;
+}
+
+@keyframes borderradius {
+    0% {
+        rotate: -12600deg;
+    }
+
+    100% {
+        border-radius: 5%;
+    }
 
 }
+
+
+
 
 .poem {
     font-size: 2vw;
+    animation: fontcolor 1s alternate infinite;
+
 }
+
+@keyframes fontcolor {
+    100% {
+        color: blue;
+    }
+
+    20% {
+        color: aqua;
+    }
+
+    40% {
+        color: yellow;
+    }
+
+    60% {
+        color: darkorchid;
+    }
+
+
+    80% {
+        color: crimson;
+    }
+}
+
 
 .overlay {
     position: absolute;
@@ -37,6 +80,7 @@ body {
 }
 
 .text {
+
     /* vw это ширина видимой области экрана */
     font-size: 7vw;
     /*установить шрифт для элемента*/
@@ -48,7 +92,18 @@ body {
     left: 50%;
     /*СДВИНУТЬ  элемент на -50% по оси абцисс и -50% по оси ординат.*/
     transform: translate(-50%, -50%);
+    animation: zoom 3s infinite alternate;
 
+}
+
+@keyframes zoom {
+    0% {
+        scale: 100%;
+    }
+
+    100% {
+        scale: 60%;
+    }
 }
 
 .trigger {
